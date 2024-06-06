@@ -32,7 +32,7 @@ body, html {
     height: 3px;
     background-color: white;
     border-radius: 50%;
-    transition: transform 1s linear;
+    transition: transform 2s linear;
     box-shadow: 0 0 8px 2px white;
   }
   h1{
@@ -58,7 +58,6 @@ body, html {
       this.currentAngle = Math.random() * Math.PI * 2;
       this.currentRadius = circleRadius * Math.sqrt(Math.random());
       this.move();
-      this.firstMove = true;
     }
 
     move() {
@@ -72,12 +71,7 @@ body, html {
       const dotY = this.currentRadius * Math.sin(this.currentAngle);
       this.element.style.transform = `translate(${dotX}px, ${dotY}px)`;
       
-      setTimeout(() => this.move(), 1000);
-    }
-
-    if (firstMove) {
-        this.move();
-        firstMove = false;
+      setTimeout(() => this.move(), 2000);
     }
   }
 
@@ -89,17 +83,22 @@ body, html {
     new Dot(dot);
   }
 
+  function updatePosition(x, y) {
+    const offset = 50; // Half the width/height of the cursor circle
+    cursorCircle.style.left = (x - offset) + 'px';
+    cursorCircle.style.top = (y - offset) + 'px';
+  }
+
   document.addEventListener('mousemove', function(e) {
-    const offset = 50;
-    cursorCircle.style.left = (e.pageX - offset) + 'px';
-    cursorCircle.style.top = (e.pageY - offset) + 'px';
+    updatePosition(e.pageX, e.pageY);
   });
 
   document.addEventListener('touchmove', function(e) {
+    console.log(e.touches[0]);
     e.preventDefault(); // Prevents the window from scrolling
     var touch = e.touches[0];
     updatePosition(touch.clientX, touch.clientY);
-  }, { passive: false }); // Ensures the touch event listener is not passive
+  }, { passive: false }); // Important to handle touchmove correctly
 
 </script>
 </body>
