@@ -94,6 +94,13 @@ body, html {
     cursorCircle.style.left = (e.pageX - offset) + 'px';
     cursorCircle.style.top = (e.pageY - offset) + 'px';
   });
+
+  document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    const touch = e.touches[0];
+    updatePosition(touch.clientX, touch.clientY);
+  });
+
 </script>
 </body>
 </html>
