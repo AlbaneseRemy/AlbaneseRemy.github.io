@@ -1,0 +1,20 @@
+{
+  "main_title" : "Accueil - Target Panic App",
+  "main_language_button" : "Changer la langue - fr",
+  "main_nb_arrows" : "Nombre de flèches dans la volée :",
+  "main_min_shooting_time" : "Temps de tir minimum (en secondes) :",
+  "main_max_shooting_time" : "Temps de tir maximum (en secondes) :",
+  "main_no_shoot_checkbox" : "Ajouter une probabilite de 1/2 de ne pas tirer :",
+  "main_start_button" : "Commencer",
+  "main_error_dialog_title" : "Erreur",
+  "main_error_dialog_message" : "Le temps minimum de tir doit être inférieur au temps maximum de tir",
+  "main_ui_ok" : "Ok",
+
+  "shooting_title" : "Séquence de tir",
+  "shooting_preparation" : "Préparation. Il reste {0} flèche{1} à tirer",
+  "shooting_restart" : "Recommencer",
+  "shooting_patient" : "Attendez le \"bip\" pour tirer",
+  "shooting_finished_not_all_arrows_shot" : "Terminé, {0} flèche{1} passée{1} pour {2} flèche{3} tirée{3}.",
+  "shooting_finished" : "Terminé."
+
+}
