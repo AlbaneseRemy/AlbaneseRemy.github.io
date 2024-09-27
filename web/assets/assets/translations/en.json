@@ -1,0 +1,19 @@
+{
+  "main_title" : "Home - Target Panic App",
+  "main_language_button" : "Changer language - en",
+  "main_nb_arrows" : "Number of arrows in the end:",
+  "main_min_shooting_time" : "Minimum shooting time: (in seconds)",
+  "main_max_shooting_time" : "Maximum shooting time: (in seconds)",
+  "main_no_shoot_checkbox" : "Add a 1/2 probability of not shooting:",
+  "main_start_button" : "Start",
+  "main_error_dialog_title" : "Error",
+  "main_error_dialog_message" : "The minimum shooting time must be less than the maximum shooting time",
+  "main_ui_ok" : "Ok",
+
+  "shooting_title" : "Shooting sequence",
+  "shooting_preparation" : "Prepare. {0} arrow{1} left to shoot",
+  "shooting_restart" : "Restart",
+  "shooting_patient" : "Wait for the \"beep\" to shoot",
+  "shooting_finished_not_all_arrows_shot" : "Finished, {0} arrow{1} skipped for {2} arrow{3} shot.",
+  "shooting_finished" : "Finished."
+}
