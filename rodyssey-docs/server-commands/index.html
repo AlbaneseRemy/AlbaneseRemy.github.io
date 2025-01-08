@@ -1,0 +1,1121 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../custom-events/">
+      
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Server commands - Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#server-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
+      
+  <img src="../images/logo-nav.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Server commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wiki" class="md-nav__button md-logo" aria-label="Wiki" data-md-component="logo">
+      
+  <img src="../images/logo-nav.png" alt="logo">
+
+    </a>
+    Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Rodyssey wiki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-feature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Server commands
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Server commands
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accept" class="md-nav__link">
+    <span class="md-ellipsis">
+      @accept
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alootidaloottype" class="md-nav__link">
+    <span class="md-ellipsis">
+      @alootid/aloottype
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoloot" class="md-nav__link">
+    <span class="md-ellipsis">
+      @autoloot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autotrade-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      @autotrade / at
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgrank" class="md-nav__link">
+    <span class="md-ellipsis">
+      @bgrank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changedress" class="md-nav__link">
+    <span class="md-ellipsis">
+      @changedress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changegm" class="md-nav__link">
+    <span class="md-ellipsis">
+      @changegm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      @commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duel" class="md-nav__link">
+    <span class="md-ellipsis">
+      @duel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hominfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      @hominfo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homstats" class="md-nav__link">
+    <span class="md-ellipsis">
+      @homstats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invite" class="md-nav__link">
+    <span class="md-ellipsis">
+      @invite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteminfo-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      @iteminfo / ii
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joinbg" class="md-nav__link">
+    <span class="md-ellipsis">
+      @joinbg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joinevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      @joinevent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#killcount-kc" class="md-nav__link">
+    <span class="md-ellipsis">
+      @killcount / kc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leave" class="md-nav__link">
+    <span class="md-ellipsis">
+      @leave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leavebg" class="md-nav__link">
+    <span class="md-ellipsis">
+      @leavebg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      @lgp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listenbg" class="md-nav__link">
+    <span class="md-ellipsis">
+      @listenbg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memo" class="md-nav__link">
+    <span class="md-ellipsis">
+      @memo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobinfo-mi" class="md-nav__link">
+    <span class="md-ellipsis">
+      @mobinfo / mi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvprank" class="md-nav__link">
+    <span class="md-ellipsis">
+      @mvprank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noks" class="md-nav__link">
+    <span class="md-ellipsis">
+      @noks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    <span class="md-ellipsis">
+      @order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pvprank" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pvprank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      @rates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      @refresh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reject" class="md-nav__link">
+    <span class="md-ellipsis">
+      @reject
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      @request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showexp" class="md-nav__link">
+    <span class="md-ellipsis">
+      @showexp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      @time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whereis" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whereis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whobuy" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whobuy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whodrops" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whodrops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whosell" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whosell
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accept" class="md-nav__link">
+    <span class="md-ellipsis">
+      @accept
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alootidaloottype" class="md-nav__link">
+    <span class="md-ellipsis">
+      @alootid/aloottype
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoloot" class="md-nav__link">
+    <span class="md-ellipsis">
+      @autoloot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autotrade-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      @autotrade / at
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgrank" class="md-nav__link">
+    <span class="md-ellipsis">
+      @bgrank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changedress" class="md-nav__link">
+    <span class="md-ellipsis">
+      @changedress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changegm" class="md-nav__link">
+    <span class="md-ellipsis">
+      @changegm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      @commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duel" class="md-nav__link">
+    <span class="md-ellipsis">
+      @duel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hominfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      @hominfo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homstats" class="md-nav__link">
+    <span class="md-ellipsis">
+      @homstats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invite" class="md-nav__link">
+    <span class="md-ellipsis">
+      @invite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteminfo-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      @iteminfo / ii
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joinbg" class="md-nav__link">
+    <span class="md-ellipsis">
+      @joinbg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joinevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      @joinevent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#killcount-kc" class="md-nav__link">
+    <span class="md-ellipsis">
+      @killcount / kc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leave" class="md-nav__link">
+    <span class="md-ellipsis">
+      @leave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leavebg" class="md-nav__link">
+    <span class="md-ellipsis">
+      @leavebg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      @lgp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listenbg" class="md-nav__link">
+    <span class="md-ellipsis">
+      @listenbg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memo" class="md-nav__link">
+    <span class="md-ellipsis">
+      @memo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobinfo-mi" class="md-nav__link">
+    <span class="md-ellipsis">
+      @mobinfo / mi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvprank" class="md-nav__link">
+    <span class="md-ellipsis">
+      @mvprank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noks" class="md-nav__link">
+    <span class="md-ellipsis">
+      @noks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    <span class="md-ellipsis">
+      @order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pvprank" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pvprank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      @rates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      @refresh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reject" class="md-nav__link">
+    <span class="md-ellipsis">
+      @reject
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      @request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showexp" class="md-nav__link">
+    <span class="md-ellipsis">
+      @showexp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      @time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whereis" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whereis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whobuy" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whobuy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whodrops" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whodrops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whosell" class="md-nav__link">
+    <span class="md-ellipsis">
+      @whosell
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="server-commands">Server commands</h1>
+<p>Below are a small list of commands that are available to the players.</p>
+<h3 id="accept">@accept</h3>
+<p>Accept a duel</p>
+<h3 id="alootidaloottype">@alootid/aloottype</h3>
+<p>Starts or stops autolooting a specified item/type.</p>
+<h3 id="autoloot">@autoloot</h3>
+<p>Enables or disables autolooting items from killed mobs.</p>
+<h3 id="autotrade-at">@autotrade / at</h3>
+<p>Allows you continue vending offline, then logs off.</p>
+<h3 id="bgrank">@bgrank</h3>
+<p>Display the BattleGround ranking.</p>
+<h3 id="changedress">@changedress</h3>
+<p>Removes all character costumes.</p>
+<h3 id="changegm">@changegm</h3>
+<p>Changes the guildmaster of your guild to another member.</p>
+<h3 id="commands">@commands</h3>
+<p>Displays a list of @ commands available to the player.</p>
+<h3 id="duel">@duel</h3>
+<p>Starts a duel.</p>
+<h3 id="hominfo">@hominfo</h3>
+<p>For Alchemist class, use to check the status of the current homunculus.</p>
+<h3 id="homstats">@homstats</h3>
+<p>Displays homunculus stats in different formats.</p>
+<h3 id="invite">@invite</h3>
+<p>Propose a player to a duel.</p>
+<h3 id="iteminfo-ii">@iteminfo / ii</h3>
+<p>Use to search item information in-game.</p>
+<h3 id="joinbg">@joinbg</h3>
+<p>This command is used to join the queue to enter BG.</p>
+<h3 id="joinevent">@joinevent</h3>
+<p>Brings you to the active automated event.</p>
+<h3 id="killcount-kc">@killcount / kc</h3>
+<p>Added @killcount command to count killed monsters.</p>
+<h3 id="leave">@leave</h3>
+<p>Leave a duel</p>
+<h3 id="leavebg">@leavebg</h3>
+<p>This command is used to leave the queue to enter BG.</p>
+<h3 id="lgp">@lgp</h3>
+<p>When enabled, offers various on-screen enhancements to improve gameplay.</p>
+<h3 id="listenbg">@listenbg</h3>
+<p>Ignore the BG announcements.</p>
+<h3 id="memo">@memo</h3>
+<p>Saves a warp point for the "Warp Portal" skill.</p>
+<h3 id="mobinfo-mi">@mobinfo / mi</h3>
+<p>Use to search monster details in-game.</p>
+<h3 id="mvprank">@mvprank</h3>
+<p>Display the MVP ranking.</p>
+<h3 id="noks">@noks</h3>
+<p>To prevent other players from stealing your mob.</p>
+<h3 id="order">@order</h3>
+<p>Use this command to send a message to all your teammates.</p>
+<h3 id="pvprank">@pvprank</h3>
+<p>Display the PVP ranking.</p>
+<h3 id="rates">@rates</h3>
+<p>Shows the current server rates.</p>
+<h3 id="refresh">@refresh</h3>
+<p>Synchronizes the player's position on the client with the one stored on the server.</p>
+<h3 id="reject">@reject</h3>
+<p>Reject a duel.</p>
+<h3 id="request">@request</h3>
+<p>Sends a message to all connected GMs (via the gm whisper system).</p>
+<h3 id="showexp">@showexp</h3>
+<p>Toggles the display of experience gain messages.</p>
+<h3 id="time">@time</h3>
+<p>Shows the current server time.</p>
+<h3 id="whereis">@whereis</h3>
+<p>Displays the maps in which monster normally spawns.</p>
+<h3 id="whobuy">@whobuy</h3>
+<p>Displays Buying Stores containing that item.</p>
+<h3 id="whodrops">@whodrops</h3>
+<p>Use to check on which mob drops the specific item that you are looking for.</p>
+<h3 id="whosell">@whosell</h3>
+<p>Displays Vending stores containing that item.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
