@@ -9,3 +9,24 @@
     vertical-align: middle; 
     margin-left: 5px;
 }
+
+.skill-img{
+  width: 30px; 
+  height: 30px; 
+  vertical-align: middle; 
+}
+
+footer{
+  background-color: black;
+}
+
+.flex{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex div{
+  margin: 1rem;
+}
