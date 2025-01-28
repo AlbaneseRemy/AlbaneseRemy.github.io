@@ -1,0 +1,21 @@
+{
+  "main_title" : "bruit r0se",
+  "username_label_text" : "Nom d'utilisateur·rice",
+  "username_hint" : "Bob",
+  "password_label_text" : "Mot de passe",
+  "login_button_text" : "Connexion",
+
+  "member_page_title" : "Bonjour, {0} !",
+  "add_member_button" : "Ajouter un·e adhérent·e",
+  "user_details_close_button" : "Fermer",
+  "add_new_member_modal" : "Ajouter un·e nouvel adhérent·e",
+
+  "firstname_label_text" : "Prénom",
+  "firstname_hint" : "Bob",
+  "lastname_label_text" : "Nom",
+  "lastname_hint" : "By",
+  "email_label_text" : "Adresse e-mail",
+  "email_hint" : "coucou@cool.com",
+  "invalid_email_error_translation" : "Adresse e-mail invalide",
+  "validate_add_member_button" : "Ajouter l'adhérent·e"
+}
