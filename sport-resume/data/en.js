@@ -253,6 +253,7 @@ window.I18N.en = {
     ] },
     { label: 'Arrow rest', value: 'Arc Système Monorest', items: null },
     { label: 'Stabiliser', value: 'Ramrods Beast — 30” and 13.5”', items: null },
+    { label : 'Bowstrings', value : 'Reign Bowstrings - Supreme Edition Bloodline B99', items: null },
     { label: 'Peep sight', value: 'Specialty Archery Podium Peep', items: null },
     { label: 'Releases', value: null, items: ['Stan Element', 'Tru Ball Abyss Flex'] },
     { label: 'Arrows', value: null, items: [

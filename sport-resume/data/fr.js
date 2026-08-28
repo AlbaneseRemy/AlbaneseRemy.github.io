@@ -252,6 +252,7 @@ window.I18N.fr = {
     ] },
     { label: 'Repose-flèche', value: 'Arc Système Monorest', items: null },
     { label: 'Stabilisation', value: 'Ramrods Beast — 30” et 13,5”', items: null },
+    { label : 'Cordage', value : 'Reign Bowstrings - Supreme Edition Bloodline B99', items: null },
     { label: 'Visette', value: 'Specialty Archery Podium Peep', items: null },
     { label: 'Décocheurs', value: null, items: ['Stan Element', 'Tru Ball Abyss Flex'] },
     { label: 'Flèches', value: null, items: [
