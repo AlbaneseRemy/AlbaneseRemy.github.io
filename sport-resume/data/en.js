@@ -37,11 +37,21 @@ window.I18N.en = {
     location: 'Grenoble, France',
     emailLabel: 'Email',
     links: [
-      { label: 'Instagram', url: 'https://www.instagram.com/remyalbanese/' },
-      { label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=100008065725110' },
+      { label: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/remyalbanese/' },
+      {
+        label: 'Facebook',
+        icon: 'facebook',
+        url: 'https://www.facebook.com/profile.php?id=100008065725110',
+      },
       {
         label: 'World Archery',
+        icon: 'worldarchery',
         url: 'https://www.worldarchery.sport/fr/profile/32192/r%C3%A9my-albanese/biography',
+      },
+      {
+        label: 'LinkedIn',
+        icon: 'linkedin',
+        url: 'https://www.linkedin.com/in/r%C3%A9my-albanese-863233238/',
       },
     ],
   },
@@ -50,8 +60,8 @@ window.I18N.en = {
     results: 'Results',
     bests: 'Personal bests',
     rankings: 'National ranking',
-    education: 'Education',
     work: 'Work experience',
+    education: 'Education',
     gear: 'Bow setup',
     goals: 'Competition goals',
   },

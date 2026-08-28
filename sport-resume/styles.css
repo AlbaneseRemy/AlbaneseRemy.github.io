@@ -250,8 +250,32 @@ a:hover { color: var(--accent-2); }
   font-size: 0.875rem;
   color: var(--ink-2);
 }
-.contact a { text-decoration: none; overflow-wrap: anywhere; }
+.contact a { text-decoration: none; overflow-wrap: anywhere; min-width: 0; }
 .contact a:hover { text-decoration: underline; }
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.contact__emoji {
+  flex: none;
+  width: 1em;
+  font-size: 0.95em;
+  line-height: 1;
+  text-align: center;
+}
+
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.contact__link .icon { font-size: 1.05em; color: var(--ink-3); }
+.contact__link:hover .icon { color: var(--ink); }
+
+.icon--brand { fill: currentColor; stroke: none; }
 
 /* --- Summary ----------------------------------------------------------- */
 
@@ -673,6 +697,7 @@ a.best__score:hover { color: var(--accent); }
     word-break: break-all;
   }
   .result__link .icon { display: none; }
+  .contact .icon, .contact__emoji { display: none; }
 
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .photo__btn { cursor: default; }
