@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Rémy Albanese — Compound archer</title>
+<meta name="description" content="Sporting CV of Rémy Albanese, French compound archer: international results, personal bests, bow setup and competition goals.">
+<meta name="author" content="Rémy Albanese">
+
+<link rel="canonical" href="./">
+<link rel="alternate" hreflang="fr" href="?lang=fr">
+<link rel="alternate" hreflang="en" href="?lang=en">
+<link rel="alternate" hreflang="x-default" href="./">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Rémy Albanese — Compound archer">
+<meta property="og:description" content="International results, personal bests, bow setup and competition goals.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17191b" media="(prefers-color-scheme: dark)">
+
+<link rel="preload" as="image" href="assets/portrait.webp">
+<link rel="stylesheet" href="styles.css">
+
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+  } catch (e) {
+    console.warn('Impossible de lire le thème dans localStorage :', e);
+  }
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main" data-i18n="ui.skipToContent">Skip to content</a>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="identity">
+      <img class="portrait" id="portrait" src="assets/portrait.webp"
+           width="480" height="480" alt="" decoding="async">
+      <div>
+        <h1 class="identity__name" data-i18n="header.name">Rémy Albanese</h1>
+        <p class="identity__role" data-i18n="header.role">Compound archer</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="langswitch" role="group" aria-label="Language" data-i18n-attr="aria-label:ui.langLabel">
+        <button type="button" class="langswitch__btn" data-lang="fr" aria-pressed="false">FR 🇫🇷</button>
+        <button type="button" class="langswitch__btn" data-lang="en" aria-pressed="false">EN 🇬🇧/🇺🇸</button>
+      </div>
+
+      <button type="button" id="theme-toggle" class="iconbtn" aria-pressed="false">
+        <svg class="icon icon--sun" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+          <circle cx="10" cy="10" r="3.6"/>
+          <path d="M10 1.6v2.2M10 16.2v2.2M18.4 10h-2.2M3.8 10H1.6M15.94 4.06l-1.56 1.56M5.62 14.38l-1.56 1.56M15.94 15.94l-1.56-1.56M5.62 5.62L4.06 4.06"/>
+        </svg>
+        <svg class="icon icon--moon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+          <path d="M16.5 12.4A7 7 0 0 1 7.6 3.5a7 7 0 1 0 8.9 8.9z"/>
+        </svg>
+      </button>
+
+      <!--<a id="pdf-link" class="btn" href="assets/cv-en.pdf" download>
+        <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+          <path d="M10 2.8v9.4M6.2 8.6 10 12.4l3.8-3.8M3.4 15.6h13.2"/>
+        </svg>
+        <span data-i18n="ui.downloadPdf">Download PDF</span>
+      </a>-->
+    </div>
+
+    <ul class="contact" id="contact"></ul>
+
+    <nav class="toc" id="toc" aria-labelledby="toc-title">
+      <h2 class="toc__title" id="toc-title" data-i18n="ui.contents">Contents</h2>
+      <ul class="toc__list" id="toc-list"></ul>
+    </nav>
+  </aside>
+
+  <div class="content">
+
+    <nav class="tabs" aria-label="Sections">
+      <div class="tabs__list" role="tablist">
+        <button type="button" role="tab" id="tab-cv" class="tab"
+                aria-controls="panel-cv" aria-selected="true"
+                data-i18n="ui.tabCv">CV</button>
+        <button type="button" role="tab" id="tab-annex" class="tab"
+                aria-controls="panel-annex" aria-selected="false" tabindex="-1"
+                data-i18n="ui.tabAnnex">Photos</button>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section id="panel-cv" role="tabpanel" aria-labelledby="tab-cv" tabindex="-1">
+
+        <div class="blocks">
+          <section class="block" id="sec-results">
+            <h2 class="block__title" data-i18n="sections.results">Results</h2>
+            <div id="results"></div>
+          </section>
+
+          <section class="block" id="sec-bests">
+            <h2 class="block__title" data-i18n="sections.bests">Personal bests</h2>
+            <ul class="bests" id="bests"></ul>
+          </section>
+
+          <section class="block" id="sec-rankings">
+            <h2 class="block__title" id="rankings-title">National ranking</h2>
+            <ul class="bests" id="rankings"></ul>
+          </section>
+        </div>
+
+        <div class="blocks blocks--two">
+          <section class="block" id="sec-goals">
+            <h2 class="block__title" data-i18n="sections.goals">Competition goals</h2>
+            <div class="prose" id="goals"></div>
+          </section>
+
+          <section class="block" id="sec-gear">
+            <h2 class="block__title" data-i18n="sections.gear">Bow setup</h2>
+            <dl class="gear" id="gear"></dl>
+          </section>
+        </div>
+
+        <div class="blocks blocks--two">
+          <section class="block" id="sec-education">
+            <h2 class="block__title" data-i18n="sections.education">Education</h2>
+            <ul class="entries" id="education"></ul>
+          </section>
+
+          <section class="block" id="sec-work">
+            <h2 class="block__title" data-i18n="sections.work">Work experience</h2>
+            <ul class="entries" id="work"></ul>
+          </section>
+        </div>
+
+      </section>
+
+      <section id="panel-annex" role="tabpanel" aria-labelledby="tab-annex" tabindex="-1" hidden>
+        <h2 class="block__title" data-i18n="ui.tabAnnex">Photos</h2>
+        <ul class="gallery" id="gallery"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer-name">Rémy Albanese</p>
+    </footer>
+
+  </div>
+</div>
+
+<dialog id="lightbox" class="lightbox" aria-label="Photos">
+  <figure class="lightbox__figure">
+    <img id="lightbox-img" class="lightbox__img" alt="" width="1600" height="1067">
+    <figcaption class="lightbox__caption">
+      <span id="lightbox-caption" class="lightbox__title"></span>
+      <span id="lightbox-credit" class="lightbox__credit"></span>
+    </figcaption>
+  </figure>
+
+  <div class="lightbox__bar">
+    <button type="button" id="lb-prev" class="iconbtn iconbtn--ondark">
+      <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <path d="M12.5 3.5 6 10l6.5 6.5"/>
+      </svg>
+    </button>
+    <span id="lb-counter" class="lightbox__counter"></span>
+    <button type="button" id="lb-next" class="iconbtn iconbtn--ondark">
+      <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <path d="M7.5 3.5 14 10l-6.5 6.5"/>
+      </svg>
+    </button>
+  </div>
+
+  <button type="button" id="lb-close" class="iconbtn iconbtn--ondark lightbox__close">
+    <svg class="icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+      <path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/>
+    </svg>
+  </button>
+</dialog>
+
+<script src="data/fr.js"></script>
+<script src="data/en.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
