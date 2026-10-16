@@ -76,7 +76,8 @@ window.I18N.fr = {
         { text: 'Vice-champion de France par équipes en Division 1, avec le club de Miramas',
           url: "https://ianseo.net/TourData/2026/27533/R1HCOof.pdf?time=2026-06-22+08%3A28%3A20", medal: 'silver' },
         { text: 'Champion de France 3D', url: "https://ianseo.net/TourData/2026/29418/IFS1HTL.php", medal: 'gold' },
-        { text: 'Sélectionné en équipe nationale pour les Championnats du Monde 3D', url: "https://www.ffta.fr/actualites/lequipe-de-france-au-championnat-du-monde-3d-avec-13-tricolores-fin-septembre" },
+        { text: '6ᵉ place individuelle aux Championnats du Monde 3D', url: "https://www.ianseo.net/TourData/2026/30357/IFCM.php" },
+        { text: 'Champion du Monde par équipe 3D', url: "https://www.ianseo.net/TourData/2026/30357/TFMT.php", medal: 'gold' },
       ],
     },
     {
@@ -287,6 +288,14 @@ window.I18N.fr = {
   },
 
   photos: [
+    { file: 'photo-12', w: 1080, h: 1080,
+      caption: 'Yankton 2026 — Championnats du Monde 3D',
+      credit: 'Photo : Dean Alberga / World Archery',
+      alt: 'En pleine allonge de face, visant le ciel' },
+     { file: 'photo-11', w: 1080, h: 1080,
+      caption: 'Yankton 2026 — Championnats du Monde 3D',
+      credit: 'Photo : Dean Alberga / World Archery',
+      alt: 'En pleine allonge de face, avec Nico Wiener en arrière-plan' },
     { file: 'photo-9', w: 1080, h: 1080,
       caption: 'Ecouen 2026 — Championnat de France 3D',
       credit: 'Photo : FxD Events Photography',

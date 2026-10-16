@@ -76,8 +76,8 @@ window.I18N.en = {
         { text: 'National team vice-champion, First Division, with Miramas archery club',
           url: "https://ianseo.net/TourData/2026/27533/R1HCOof.pdf?time=2026-06-22+08%3A28%3A20", medal: 'silver' },
         { text: 'French national champion, 3D', url: "https://ianseo.net/TourData/2026/29418/IFS1HTL.php", medal: 'gold' },
-        { text: 'Selected for the French national team for the 3D World Championships',
-          url: "https://www.ffta.fr/actualites/lequipe-de-france-au-championnat-du-monde-3d-avec-13-tricolores-fin-septembre" },
+        { text: '6th individual place at World 3D Championships', url: "https://www.ianseo.net/TourData/2026/30357/IFCM.php" },
+        { text: 'World 3D team champion', url: "https://www.ianseo.net/TourData/2026/30357/TFMT.php", medal: 'gold' },
       ],
     },
     {
@@ -179,8 +179,8 @@ window.I18N.en = {
     { label: 'Indoor (18 m)', score: '593',
       url: 'https://extranet.ffta.fr/pdfresultats/2025/S_0138088_20251122_74161.pdf' },
     { label: 'Outdoor (50 m)', score: '705', url: "https://extranet.ffta.fr/pdfresultats/2026/T_0138088_20260524_76293.pdf" },
-    { label: '3D', score: '520', url: "https://extranet.ffta.fr/pdfresultats/2026/3_1384129_20260726_75988.pdf" },
-    { label: 'Field', score: '410',
+    { label: 'WA 3D', score: '520', url: "https://extranet.ffta.fr/pdfresultats/2026/3_1384129_20260726_75988.pdf" },
+    { label: 'WA Field', score: '410',
       url: 'https://extranet.ffta.fr/pdfresultats/2023/C_0169188_20230508_62490.pdf' },
   ],
 
@@ -189,8 +189,8 @@ window.I18N.en = {
     items: [
       { label: 'Indoor (18 m)', rank: '8', note: '/629', url: "https://extranet.ffta.fr/iframe/classement/14093.html" },
       { label: 'Outdoor (50 m)', rank: '5', note: '/1389', url: "https://extranet.ffta.fr/iframe/classement/14017.html" },
-      { label: '3D', rank: '2', note: '/182', url: "https://extranet.ffta.fr/iframe/classement/14141.html" },
-      { label: 'Field', rank: '9', note: '/201', url: "https://extranet.ffta.fr/iframe/classement/14223.html" },
+      { label: 'WA 3D', rank: '2', note: '/182', url: "https://extranet.ffta.fr/iframe/classement/14141.html" },
+      { label: 'WA Field', rank: '9', note: '/201', url: "https://extranet.ffta.fr/iframe/classement/14223.html" },
     ],
   },
 
@@ -286,6 +286,14 @@ window.I18N.en = {
   },
 
   photos: [
+     { file: 'photo-12', w: 1080, h: 1080,
+      caption: 'Yankton 2026 — 3D World Championships',
+      credit: 'Photo : Dean Alberga / World Archery',
+      alt: 'At full draw from the front, aiming to the sky' },
+     { file: 'photo-11', w: 1080, h: 1080,
+      caption: 'Yankton 2026 — 3D World Championships',
+      credit: 'Photo : Dean Alberga / World Archery',
+      alt: 'At full draw from the front, with Nico Wiener in the background' },
     { file: 'photo-9', w: 1080, h: 1080,
       caption: 'Ecouen 2026 — 3D National Championships',
       credit: 'Photo : FxD Events Photography',
